@@ -70,14 +70,7 @@ Output = {'Mon': -6, 'Tue': 2, 'Wed': 2, 'Thu': 4, 'Fri': 6, 'Sat': 8, 'Sun': 2}
 - **Space Complexity**: O(1) - fixed size output dictionary
 - **Date Range**: 1970-01-01 to 2100-01-01
 - **Value Range**: -1,000,000 to 1,000,000
-- **Input Constraints**: At least Monday & Sunday must be present
-
-## 📸 Screenshots
-
-### Test Results
-![Test Results 1](https://github.com/mrityu12/analytics/blob/cec0ba68006bed2420e103891584ed9f43e1bfb0/Screenshot%202025-08-14%20103544.png)
-
-![Test Results 2](https://github.com/mrityu12/analytics/blob/cec0ba68006bed2420e103891584ed9f43e1bfb0/Screenshot%202025-08-14%20103554.png)
+- **Input Constraints**: At least Monday & Sunday must be presen
 
 ### Test Cases Covered:
 - ✅ Basic functionality with all days present
@@ -92,7 +85,10 @@ Output = {'Mon': -6, 'Tue': 2, 'Wed': 2, 'Thu': 4, 'Fri': 6, 'Sat': 8, 'Sun': 2}
 ```
 ├── analytics.js
 ├── README.md           # This file
-+
+
+![Alt text for screenshot](Screenshot%202025-08-14%20103544.png)
+![Alt text for screenshot](Screenshot%202025-08-14%20103554.png)
+
 
 ## 🏃‍♂️ Quick Start
 
