@@ -86,7 +86,7 @@ Output = {'Mon': -6, 'Tue': 2, 'Wed': 2, 'Thu': 4, 'Fri': 6, 'Sat': 8, 'Sun': 2}
 ├── analytics.js
 ├── README.md           # This file
 
-![Alt text for screenshot](Screenshot%202025-08-14%20103544.png)
+![Alt text for screenshot](https://github.com/mrityu12/analytics/blob/326a9ac3bc6667374853a6bf9ab96e475bff4111/Screenshot%202025-08-14%20103544.png)
 ![Alt text for screenshot](Screenshot%202025-08-14%20103554.png)
 
 
