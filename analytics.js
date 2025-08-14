@@ -1,5 +1,5 @@
 function solution(D) {
-  // Initialize result dictionary with all days of the week set to 0
+
   const result = {
     'Mon': 0,
     'Tue': 0,
@@ -10,17 +10,17 @@ function solution(D) {
     'Sun': 0
   };
   
-  // Day names array to map getDay() results
+
   const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   
-  // Process each date in the input dictionary
+
   for (const dateStr in D) {
     const date = new Date(dateStr);
     const dayOfWeek = dayNames[date.getDay()];
     result[dayOfWeek] += D[dateStr];
   }
   
-  // Handle missing days by calculating mean of previous and next day
+
   const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   const originalSums = { ...result };
   
@@ -38,7 +38,7 @@ function solution(D) {
       }
     }
     
-    // If no original data for this day, calculate mean of prev and next
+  
     if (!hasOriginalData) {
       const prevDay = days[(i - 1 + days.length) % days.length];
       const nextDay = days[(i + 1) % days.length];
@@ -49,11 +49,11 @@ function solution(D) {
   return result;
 }
 
-// Unit tests
+// tests
 function runTests() {
   console.log("Running tests...\n");
   
-  // Test 1: Basic functionality
+  // Test 1:
   const input1 = {
     '2020-01-01': 4,   // Wed
     '2020-01-02': 4,   // Thu  
@@ -82,7 +82,7 @@ function runTests() {
   console.log("Result:", result1);
   console.log("Pass:", JSON.stringify(result1) === JSON.stringify(expected1), "\n");
   
-  // Test 2: Missing days (Thu & Fri missing)
+  // Test 2:
   const input2 = {
     '2020-01-01': 6,   // Wed
     '2020-01-04': 12,  // Sat (skipping Thu & Fri)
@@ -108,7 +108,7 @@ function runTests() {
   console.log("Result:", result2);
   console.log("Pass:", JSON.stringify(result2) === JSON.stringify(expected2), "\n");
   
-  // Test 3: Multiple dates on same day
+  // Test 3:
   const input3 = {
     '2020-01-01': 5,   // Wed
     '2020-01-08': 3,   // Wed (same day of week)
@@ -143,8 +143,7 @@ function runTests() {
     '2020-01-05': 20   // Sun
   };
   
-  // For missing days: Tue = mean(Mon,Wed), Wed = mean(Tue,Thu), etc.
-  // This creates a circular dependency, so we use original values
+
   const result4 = solution(input4);
   console.log("Test 4 - Only Mon and Sun:");
   console.log("Input:", input4);
